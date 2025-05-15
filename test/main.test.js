@@ -33,28 +33,28 @@ describe('Binary to Decimal Converter', () => {
   it('converts valid binary to decimal', () => {
     document.getElementById('binaryInput').value = '10101010';
     document.getElementById('convertBtn').click();
-    // expect(document.getElementById('result').textContent).toBe('Decimal: 170');
-    // expect(document.getElementById('result').style.color).toBe('rgb(51, 51, 51)');
+    expect(document.getElementById('result').textContent).toBe('Decimal: 170');
+    expect(document.getElementById('result').style.color).toBe('rgb(51, 51, 51)');
   });
 
   it('shows error for invalid input (non-binary)', () => {
     document.getElementById('binaryInput').value = '12345678';
     document.getElementById('convertBtn').click();
-    // expect(document.getElementById('result').textContent).toBe('Please enter a valid 8-bit binary number (only 0 or 1).');
-    // expect(document.getElementById('result').style.color).toBe('red');
+    expect(document.getElementById('result').textContent).toBe('Please enter a valid 8-bit binary number (only 0 or 1).');
+    expect(document.getElementById('result').style.color).toBe('red');
   });
 
   it('shows error for input longer than 8 bits', () => {
     document.getElementById('binaryInput').value = '101010101';
     document.getElementById('convertBtn').click();
-    // expect(document.getElementById('result').textContent).toBe('Please enter a valid 8-bit binary number (only 0 or 1).');
-    // expect(document.getElementById('result').style.color).toBe('red');
+    expect(document.getElementById('result').textContent).toBe('Please enter a valid 8-bit binary number (only 0 or 1).');
+    expect(document.getElementById('result').style.color).toBe('red');
   });
 
   it('shows error for empty input', () => {
     document.getElementById('binaryInput').value = '';
     document.getElementById('convertBtn').click();
-    // expect(document.getElementById('result').textContent).toBe('Please enter a valid 8-bit binary number (only 0 or 1).');
-    // expect(document.getElementById('result').style.color).toBe('red');
+    expect(document.getElementById('result').textContent).toBe('Please enter a valid 8-bit binary number (only 0 or 1).');
+    expect(document.getElementById('result').style.color).toBe('red');
   });
 });
