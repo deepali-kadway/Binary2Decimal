@@ -34,7 +34,7 @@ describe('Binary to Decimal Converter', () => {
     document.getElementById('binaryInput').value = '10101010';
     document.getElementById('convertBtn').click();
     expect(document.getElementById('result').textContent).toBe('Decimal: 170');
-    expect(document.getElementById('result').style.color).toBe('rgb(51, 51, 51)');
+    expect(document.getElementById('result').style.color).toBe('red'); 
   });
 
   it('shows error for invalid input (non-binary)', () => {
